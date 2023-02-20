@@ -14,8 +14,8 @@ class DirectorService:
     def create(self, data):
         return self.director_dao.create(data)
 
-    def updata(self, data):
-        self.director_dao = self.director_dao.update(data)
+    def update(self, data):
+        self.director_dao.update(data)
         return self.director_dao
 
     def delete(self, id):

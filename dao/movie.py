@@ -34,6 +34,7 @@ class MovieDAO:
     def update(self, data):
         id = data.pop('id')
         movie = self.get_by_id(id)
+
         for field_name, field_value in data.items():
             setattr(movie, field_name, field_value)
 
@@ -44,3 +45,4 @@ class MovieDAO:
         movie = self.session.query(self.model).get(id)
         self.session.delete(movie)
         self.session.commit()
+

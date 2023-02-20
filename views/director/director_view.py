@@ -35,7 +35,7 @@ class DirectorView(Resource):
     def put(self, did):
         data = request.json
         data['id'] = did
-        director_service.updata(data)
+        director_service.update(data)
         return '', 204
 
     def delete(self, did):

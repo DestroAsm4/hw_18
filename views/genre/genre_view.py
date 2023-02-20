@@ -35,7 +35,7 @@ class GenreView(Resource):
     def put(self, gid):
         data = request.json
         data['id'] = gid
-        genre_service.updata(data)
+        genre_service.update(data)
         return '', 204
 
     def delete(self, gid):
